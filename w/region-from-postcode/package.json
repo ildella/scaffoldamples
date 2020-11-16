@@ -1,0 +1,17 @@
+{
+  "name": "@scaffoldample/region-from-postcode",
+  "version": "0.1.0",
+  "main": "index.js",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.10"
+  },
+  "scripts": {
+    "start": "node src/start"
+  },
+  "dependencies": {
+    "aws-lambda-fastify": "^1.4.4",
+    "axios": "^0.21.0",
+    "fastify": "^3.7.0"
+  }
+}

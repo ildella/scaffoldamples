@@ -1,0 +1,10 @@
+node_modules
+**/**yarn-error.log
+coverage/**
+*.todo
+cpd.report
+dist/
+.terraform/
+terraform.tfstate*
+*-output.txt
+.k6/

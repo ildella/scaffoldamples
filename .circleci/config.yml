@@ -1,0 +1,35 @@
+version: 2.1
+orbs:
+  node: circleci/node@4.1.0
+
+jobs:
+  # install-node:
+  #   docker:
+  #     - image: 'cimg/base:stable'
+  #   steps:
+  #     - checkout
+  #     - node/install:
+  #         install-yarn: true
+  #         install-npm: false
+  #         node-version: 14.15
+  #     - run: node --version
+  test:
+    executor:
+      name: node/default
+      tag: '14.15'
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      # - run:
+      #     command: yarn lint
+      #     name: code linter
+      - run:
+          command: yarn test --coverage
+          name: unit tests with coverage
+
+workflows:
+  all_in_one_build:
+    jobs:
+      # - install-node
+      - test
