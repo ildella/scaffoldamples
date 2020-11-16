@@ -1,6 +1,6 @@
 # Scaffoldup
 
-[![CircleCI](https://circleci.com/gh/ildella/scaffoldup.svg?style=svg&circle-token=3c234614374dfafea47fa01d51deac0d165af92c)](https://circleci.com/gh/ildella/scaffoldup)
+[![CircleCI](https://circleci.com/gh/ildella/scaffoldup.svg?style=svg&circle-token=f049e49529737c3aab90d8ec09492822089fbf78)](https://circleci.com/gh/ildella/scaffoldup)
 
 ## Try it
 
