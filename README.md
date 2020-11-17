@@ -17,3 +17,13 @@ yarn workspace @scaffoldup/region-from-postcode start
 ## shell 2
 ./e2e-local.sh
 ```
+
+## Manual Deployment
+
+So far we can deploy 1 service with these shell script:
+
+```shell
+aws s3api create-bucket --bucket=scaffoldamples-serverless --region=eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2
+cd infrastructure && terraform init && cd ..
+yarn deploy.postcode
+```

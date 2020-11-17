@@ -5,10 +5,10 @@ version=0.1.2
 appName=postcode-matrix
 
 rm -rf dist
-ncc build src/lambda.js
+ncc build w/region-from-postcode/src/lambda
 cd dist
 zip "$appName".zip index.js
-aws s3 cp "$appName".zip s3://dellafiore-up-serverless/v"$version"/"$appName".zip
+aws s3 cp "$appName".zip s3://scaffoldamples-serverless/v"$version"/"$appName".zip
 rm "$appName".zip
 cd ..
 

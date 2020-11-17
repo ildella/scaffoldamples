@@ -22,7 +22,8 @@
     "test": "jest",
     "ci.validate": "circleci config validate",
     "ci.process": "circleci config process .circleci/config.yml > process.yml",
-    "ci.execute": "circleci local execute --job test"
+    "ci.execute": "circleci local execute --job test",
+    "deploy.postcode": "./deploy-postcode-matrix.sh"
   },
   "devDependencies": {
     "eslint": "7.13.0",
