@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: linkerd1
+  labels:
+    app: linkerd1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: linkerd1
+  template:
+    metadata:
+      labels:
+        app: linkerd1
+    spec:
+      containers:
+      - name: linkerd1
+        image: localhost:32000/linkerd1:0.1.0
+        ports:
+        - containerPort: 4546
