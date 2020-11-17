@@ -1,7 +1,7 @@
 #! /bin/bash
 set -eu
 
-version=0.1.2
+version=0.1.3
 appName=postcode-matrix
 
 rm -rf dist
