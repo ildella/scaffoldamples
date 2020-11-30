@@ -26,7 +26,7 @@
     "deploy.postcode": "./deploy-postcode-matrix.sh"
   },
   "devDependencies": {
-    "eslint": "7.13.0",
+    "eslint": "7.14.0",
     "eslint-config-node-opinionated": "0.4.0",
     "eslint-plugin-fp": "2.3.0",
     "eslint-plugin-jest": "24.1.3",
