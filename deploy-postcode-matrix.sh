@@ -22,12 +22,14 @@ cd ..
 # aws create-user
 
 region=eu-west-2
-apiId=postcode-matrix-api
-stage=dev
-stage=postcode-matrix-dev
+aws lambda invoke --region=$region --function-name=ScaffoldamplesPostcodeMatrix output.txt
 
-lambdaFunction=ScaffoldamplesPostcodeMatrix
-YOUR_ACCOUNT_ID=
-aws lambda add-permission --function-name arn:aws:lambda:XXXXXX:$lambdaFunction --source-arn arn:aws:execute-api:$region:$YOUR_ACCOUNT_ID:$apiId/*/HTTP_METHOD/resource --principal apigateway.amazonaws.com --statement-id apigateway-access --action lambda:InvokeFunction
+### HTTP GATEWAY - TBD...
 
-curl https://$apiId.execute-api.$region.amazonaws.com/$stage
+# apiId=postcode-matrix-api
+# stage=dev
+# stage=postcode-matrix-dev
+# lambdaFunction=ScaffoldamplesPostcodeMatrix
+# YOUR_ACCOUNT_ID=
+# aws lambda add-permission --function-name arn:aws:lambda:XXXXXX:$lambdaFunction --source-arn arn:aws:execute-api:$region:$YOUR_ACCOUNT_ID:$apiId/*/HTTP_METHOD/resource --principal apigateway.amazonaws.com --statement-id apigateway-access --action lambda:InvokeFunction
+# curl https://$apiId.execute-api.$region.amazonaws.com/$stage
