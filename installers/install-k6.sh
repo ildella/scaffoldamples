@@ -1,12 +1,21 @@
 #! /bin/bash
-set -eu
 
-INSTALL_FOLDER="./.k6"
-version=0.28.0
-mkdir "$INSTALL_FOLDER"
-cd "$INSTALL_FOLDER" || exit
-wget https://github.com/loadimpact/k6/releases/download/v"$version"/k6-v"$version"-linux64.tar.gz
-tar xvfz k6-v"$version"-linux64.tar.gz
+set -euxo
+
+INSTALL_PARENT="$HOME"/apps
+cd "$INSTALL_PARENT" || exit
+version=0.37.0
+
+release=k6-v"$version"-linux-amd64
+filename=$release.tar.gz
+wget https://github.com/grafana/k6/releases/download/v"$version"/$filename
+tar xvfz $filename
+
+sudo rm -f /usr/local/bin/k6
+sudo ln -s "$INSTALL_PARENT"/$release/k6 /usr/local/bin/k6
+
+k6 version
+
 rm k6-v"$version"-linux64.tar.gz
-# sudo ln -s "$INSTALL_FOLDER"/k6-v"$version"-linux64/k6 /usr/local/bin/k6
-# k6 version
+
+# https://github.com/grafana/k6/releases

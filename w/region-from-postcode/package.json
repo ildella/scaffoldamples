@@ -7,7 +7,8 @@
     "node": ">=12.10"
   },
   "scripts": {
-    "start": "node src/start"
+    "start": "node src/start",
+    "deploy.postcode": "./deploy-to-aws-lambda.sh"
   },
   "dependencies": {
     "aws-lambda-fastify": "^1.4.4",

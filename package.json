@@ -9,7 +9,7 @@
     "w/*"
   ],
   "engines": {
-    "node": ">=12.10 <15"
+    "node": ">=12.10"
   },
   "husky": {
    "hooks": {
@@ -22,8 +22,7 @@
     "test": "jest",
     "ci.validate": "circleci config validate",
     "ci.process": "circleci config process .circleci/config.yml > process.yml",
-    "ci.execute": "circleci local execute --job test",
-    "deploy.postcode": "./deploy-postcode-matrix.sh"
+    "ci.execute": "circleci local execute --job test"
   },
   "devDependencies": {
     "eslint": "7.14.0",
